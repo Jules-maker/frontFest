@@ -23,8 +23,7 @@
         
     </div>
 </template>
-<script>
-</script>
+
 <style>
 @keyframes fade-in {
   0% {

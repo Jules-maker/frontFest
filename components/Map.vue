@@ -1,6 +1,6 @@
 <template>
   <div class="bg-grey-800">
-    <h1 class="text-2xl font-bold mb-4 bg-grey-800 text-white text-center">Trouvez nous facilement !</h1>
+    <h1 class="text-2xl font-bold mb-4 bg-grey-800 text-white text-center h-14">Trouvez nous facilement !</h1>
 
     <div id="map" class="h-full"></div>
 
