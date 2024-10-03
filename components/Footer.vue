@@ -5,6 +5,10 @@
             <!--Grid-->
             <div class="py-16 flex justify-between items-center flex-col gap-8 lg:flex-row">
                 <a href="/" class="flex justify-center">
+                    <div class="flex flex-shrink-0 items-center h-12">
+              <img src="../assets/images/logo.png" alt="Electric Lamb Logo" class="h-20 w-auto mr-2" />
+              <!-- <span class="self-center text-2xl font-bold whitespace-nowrap text-orange-600">Electric Lamb</span> -->
+            </div>
                     <span class="self-center text-2xl font-bold whitespace-nowrap text-white">Electric Lamb</span>
                 </a>
                 <ul class="text-lg text-center sm:flex items-center justify-center gap-14 lg:gap-10 xl:gap-14 transition-all duration-500">

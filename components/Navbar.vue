@@ -12,8 +12,8 @@
             </DisclosureButton>
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-            <div class="flex flex-shrink-0 items-center">
-              <img src="../assets/images/logo.png" alt="Electric Lamb Logo" class="h-12 w-auto mr-2" />
+            <div class="flex flex-shrink-0 items-center h-12">
+              <img src="../assets/images/logo.png" alt="Electric Lamb Logo" class="h-20 w-auto mr-2" />
               <!-- <span class="self-center text-2xl font-bold whitespace-nowrap text-orange-600">Electric Lamb</span> -->
             </div>
             <div class="hidden sm:ml-6 sm:block">
@@ -24,7 +24,7 @@
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <!-- Profile dropdown -->
-            <Menu as="div" class="relative ml-3">
+            <!-- <Menu as="div" class="relative ml-3">
               <div>
                 <MenuButton class="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span class="absolute -inset-1.5" />
@@ -45,7 +45,7 @@
                   </MenuItem>
                 </MenuItems>
               </transition>
-            </Menu>
+            </Menu> -->
           </div>
         </div>
       </div>
