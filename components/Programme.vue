@@ -30,13 +30,11 @@
     background-color: #fef9c3; /* yellow-100
   }
  */
-  h1 {
+  h1,  h2 {
     color: #ea580c; /* orange-600 */
   }
 
-  h2 {
-    color: #facc15; /* yellow-400 */
-  }
+
 
   p {
     color: #262626; /* neutral-800 */
