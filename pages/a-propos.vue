@@ -28,13 +28,54 @@
             </div>
             
             <div class="mt-12 text-center">
-                <a href="#contact" class="inline-block bg-yellow-400 text-gray-900 font-medium py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-300 ease-in-out">
+                <button @click="showModal = true" class="inline-block bg-yellow-400 text-gray-900 font-medium py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-300 ease-in-out">
                     Contactez-nous
-                </a>
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl max-w-md w-full">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Contactez-nous</h2>
+                    <form @submit.prevent="submitForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Nom</label>
+                            <input type="text" id="name" v-model="form.name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                            <input type="email" id="email" v-model="form.email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+                            <textarea id="message" v-model="form.message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"></textarea>
+                        </div>
+                        <div class="flex justify-end space-x-3">
+                            <button type="button" @click="showModal = false" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Annuler</button>
+                            <button type="submit" class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-md hover:bg-yellow-500">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
+import { ref, reactive } from 'vue'
+
+const showModal = ref(false)
+const form = reactive({
+    name: '',
+    email: '',
+    message: ''
+})
+
+const submitForm = () => {
+    // Ici, vous pouvez ajouter la logique pour envoyer le formulaire
+    console.log('Formulaire soumis:', form)
+    // Réinitialiser le formulaire et fermer la modal
+    Object.assign(form, { name: '', email: '', message: '' })
+    showModal.value = false
+}
 </script>
