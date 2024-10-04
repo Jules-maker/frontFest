@@ -26,23 +26,30 @@
     data() {
       return {
         selectedCategory: '',
+        searchQuery: '', // Ajout d'une requête de recherche
         events: [
-          { id: 1, title: 'Atelier de danse', description: 'Apprenez les danses traditionnelles.', date: '2024-10-05', category: 'Danse' },
-          { id: 2, title: 'Projection de film', description: 'Un film en plein air.', date: '2024-10-06', category: 'Cinéma' },
-          { id: 3, title: 'Concert de jazz', description: 'Une soirée de jazz en live.', date: '2024-10-07', category: 'Musique' },
+          { id: 1, title: 'Atelier de danse', description: 'Apprenez les danses traditionnelles.', date: '2024-10-05', category: 'Electro' },
+          { id: 2, title: 'Projection de film', description: 'Un film en plein air.', date: '2024-10-06', category: 'Pop' },
+          { id: 3, title: 'Concert de jazz', description: 'Une soirée de jazz en live.', date: '2024-10-07', category: 'Jazz' },
           { id: 4, title: 'Exposition d\'art', description: 'Découvrez les œuvres d\'artistes locaux.', date: '2024-10-08', category: 'Art' },
+        ],
+        categories: [
+          'Electro',
+          'Pop',
+          'Rap/Hip-Hop',
+          'R&B/Urban Pop',
+          'Jazz',
+          'Art'
         ],
       };
     },
     computed: {
-      categories() {
-        return [...new Set(this.events.map(event => event.category))];
-      },
       filteredEvents() {
-        if (this.selectedCategory) {
-          return this.events.filter(event => event.category === this.selectedCategory);
-        }
-        return this.events;
+        return this.events.filter(event => {
+          const matchesCategory = this.selectedCategory ? event.category === this.selectedCategory : true;
+          const matchesSearch = this.searchQuery ? event.title.toLowerCase().includes(this.searchQuery.toLowerCase()) || event.description.toLowerCase().includes(this.searchQuery.toLowerCase()) : true;
+          return matchesCategory && matchesSearch;
+        });
       },
     },
   };

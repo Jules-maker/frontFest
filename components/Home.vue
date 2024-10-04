@@ -12,7 +12,7 @@
                     <p class="text-lg text-gray-600 dark:text-gray-300">
                         Découvrez la nouvelle ère de l'innovation technologique. Nous concevons des solutions innovantes pour répondre à vos besoins les plus exigeants. Joignez-vous à nous pour transformer vos idées en réalité.
                     </p>
-                    <a href="#services" class="inline-block bg-blue-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+                    <a href="/a-propos" class="inline-block bg-blue-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
                         En savoir plus
                     </a>
                 </div>
@@ -24,7 +24,7 @@
         </section>
         
         <!-- New Map Section -->
-        <section class="bg-gray-50 dark:bg-gray-800 py-12">
+        <section id="map-section" class="bg-gray-50 dark:bg-gray-800 py-12">
             <div class="container mx-auto px-6 lg:px-8">
                 <Map />
             </div>
