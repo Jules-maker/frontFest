@@ -10,7 +10,7 @@ export default {
   mounted() {
     if (process.client) {
       import('leaflet').then(L => {
-        const map = L.map('map').setView([49.4411767, 1.1034718], 13);
+        const map = L.map('map').setView([49.4437, 1.0947], 15);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
@@ -36,8 +36,8 @@ export default {
 
         // Ajout d'une zone (par exemple, un cercle)
         const circle = L.circle( [49.4437, 1.0947], {
-          color: 'red',
-          fillColor: '#f03',
+          color: 'blue',
+          fillColor: '#add8e6',
           fillOpacity: 0.5,
           radius: 250
         }).addTo(map);
@@ -50,7 +50,7 @@ export default {
         }
 
         // Exemple d'utilisation dans Leaflet
-        getDirections('49.2896256,0.999424', '49.4411767,1.1034718').then(polyline => {
+        getDirections('49.4437, 1.0947').then(polyline => {
           const decodedPolyline = L.Polyline.fromEncoded(polyline);
           L.polyline(decodedPolyline, { color: 'blue' }).addTo(map);
         });
