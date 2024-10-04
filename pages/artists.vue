@@ -1,9 +1,9 @@
 <template>
     <div>
-    <Programme/>
+    <Artists/>
     </div>
   </template>
 
 <script setup>
-import Programme from '~/components/Programme.vue'
+import Artists from '~/components/Artists.vue'
 </script>

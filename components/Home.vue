@@ -16,14 +16,12 @@
                         En savoir plus
                     </a>
                 </div>
-                <!-- Right: Image -->
                 <div class="lg:w-1/2 mt-8 lg:mt-0">
                     <img src="../assets/images/imgeFest1.webp" alt="Présentation de Electric Lamb" class="w-full h-auto rounded-lg shadow-lg">
                 </div>
             </div>
         </section>
         
-        <!-- New Map Section -->
         <section id="map-section" class="bg-gray-50 dark:bg-gray-800 py-12">
             <div class="container mx-auto px-6 lg:px-8">
                 <Map />
@@ -51,7 +49,7 @@
 </template>
 
 <script setup>
-import Map from './Map.vue'; // Import the Map component
+import Map from './Map.vue'; 
 </script>
 <style scoped>
 .logo-container {

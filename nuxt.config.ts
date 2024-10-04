@@ -8,7 +8,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
+  plugins: [
+    '~/plugins/axios.js'
+  ],
   components: true,
   compatibilityDate: '2024-10-04',
 })

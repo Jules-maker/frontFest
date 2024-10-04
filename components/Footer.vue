@@ -14,7 +14,7 @@
                 <ul class="text-lg text-center sm:flex items-center justify-center gap-14 lg:gap-10 xl:gap-14 transition-all duration-500">
                     <li><NuxtLink to="/" class="text-white hover:text-gray-400">Accueil</NuxtLink></li>
                     <li class="sm:my-0 my-2"><NuxtLink to="/evenements" class="text-white hover:text-gray-400">Événements</NuxtLink></li>
-                    <li><NuxtLink to="/programme" class="text-white hover:text-gray-400">Programme</NuxtLink></li>
+                    <li><NuxtLink to="/artists" class="text-white hover:text-gray-400">Artists</NuxtLink></li>
                     <li class="sm:my-0 my-2"><NuxtLink to="/a-propos" class="text-white hover:text-gray-400">À Propos</NuxtLink></li>
                 </ul>
                 <div class="flex space-x-4 sm:justify-center">
